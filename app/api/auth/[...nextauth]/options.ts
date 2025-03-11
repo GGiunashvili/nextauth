@@ -48,6 +48,7 @@ export const options: NextAuthOptions = {
     async jwt({ token, user, profile, trigger, session }) {
       if (trigger === "update") {
         token.name = session.name;
+        token.email = session.email;
       }
       if (profile) {
         return { ...token, ...profile };
