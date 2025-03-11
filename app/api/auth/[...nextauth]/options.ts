@@ -63,6 +63,7 @@ export const options: NextAuthOptions = {
         password: string;
         email: string;
         age: number;
+        picture: string;
       };
       return session;
     },
