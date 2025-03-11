@@ -26,8 +26,8 @@ export const options: NextAuthOptions = {
         console.log(credentials);
         const user = {
           id: "1",
-          name: "beqa",
-          password: "beqa123",
+          name: "a",
+          password: "a",
           email: "beqa@gmail.com",
           age: 21,
         };

@@ -8,18 +8,21 @@ export default async function Home() {
   console.log("sesia", session);
 
   return (
-    <div>
-      Logged In
-      <p>name: {session?.user?.name}</p>
-      <p>email: {session?.user?.email}</p>
-      <p>age: {session?.user?.age}</p>
-      <Image
-        src={session?.user?.picture as string}
-        alt=""
-        width={"100"}
-        height={"100"}
-      />
-      <UpdateUser />
+    <div className="flex bg-red-100 text-black">
+      <div>
+        <p>name: {session?.user?.name}</p>
+        <p>email: {session?.user?.email}</p>
+        <p>age: {session?.user?.age}</p>
+      </div>
+      <div>
+        <Image
+          src={session?.user?.picture as string}
+          alt=""
+          width={"100"}
+          height={"100"}
+        />
+        <UpdateUser />
+      </div>
     </div>
   );
 }

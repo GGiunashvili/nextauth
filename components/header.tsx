@@ -10,7 +10,7 @@ export default function header() {
         <Link href={"/api/auth/signin"}>Login</Link>
         <Link href={"/"}>Home</Link>
         <button onClick={() => signOut()}>Sign out</button>
-        <Link href={"/api/auth/signout"}>signoutttttt</Link>
+        {/* <Link href={"/api/auth/signout"}>signoutttttt</Link> */}
         <Link href={"/about"}>about</Link>
       </nav>
     </div>
