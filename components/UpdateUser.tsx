@@ -31,19 +31,18 @@ export default function UpdateUser() {
 
   console.log("data", data);
   return (
-    <div>
+    <div className="flex flex-col gap-[10px] p-[16px]">
       <h1>Update User</h1>
 
       <Image
         src={data?.user?.picture as string}
-        alt="User Picture"
-        width={100}
-        height={100}
+        alt="profile picture"
+        width={200}
+        height={200}
       />
       <div className="flex gap-[20px]">
-        <p>Name: {data?.user?.name}</p>
         <div className="flex gap-[20px]">
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">Name: {data?.user?.name}</label>
           <input
             className="border"
             type="text"
@@ -56,9 +55,8 @@ export default function UpdateUser() {
       </div>
 
       <div className="flex gap-[20px]">
-        <p>Email: {data?.user?.email}</p>
         <div className="flex gap-[20px]">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">Email: {data?.user?.email}</label>
           <input
             className="border"
             type="email"
@@ -70,8 +68,7 @@ export default function UpdateUser() {
         </div>
       </div>
 
-      <p>Updated Name: {name}</p>
-      <p>Updated Email: {email}</p>
+      {data?.user?.bio && <p>Bio: {data.user.bio}</p>}
     </div>
   );
 }

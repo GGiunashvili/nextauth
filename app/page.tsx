@@ -8,21 +8,8 @@ export default async function Home() {
   console.log("sesia", session);
 
   return (
-    <div className="flex">
-      <div>
-        <p>name: {session?.user?.name}</p>
-        <p>email: {session?.user?.email}</p>
-        <p>age: {session?.user?.age}</p>
-      </div>
-      <div>
-        <Image
-          src={session?.user?.picture as string}
-          alt=""
-          width={"100"}
-          height={"100"}
-        />
-        <UpdateUser />
-      </div>
+    <div className="flex gap-[10px] justify-center items-center h-screen bg-red-100 text-3xl">
+      <p>Hello {session?.user?.name}</p>
     </div>
   );
 }

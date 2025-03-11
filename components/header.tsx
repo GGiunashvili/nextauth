@@ -19,6 +19,8 @@ export default function header() {
       <nav className="bg-sky-700 flex gap-2">
         <Link href={"/api/auth/signin"}>Login</Link>
         <Link href={"/"}>Home</Link>
+        <Link href={"/profile"}>profile</Link>
+
         <button onClick={handleSignOut}>Sign out</button>
         <Link href={"/about"}>About</Link>
       </nav>

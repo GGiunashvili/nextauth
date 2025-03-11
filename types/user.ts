@@ -5,4 +5,5 @@ export interface UserT {
   email: string;
   age: number;
   picture: string;
+  bio: string;
 }
