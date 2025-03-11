@@ -29,7 +29,18 @@ export default function Page() {
     });
 
     if (response?.ok) {
-      router.push("/");
+      router.push("/profile");
+    }
+  };
+
+  const handleGithubSignIn = async () => {
+    const response = await signIn("github", {
+      redirect: false,
+      callbackUrl: "/profile",
+    });
+
+    if (response?.ok) {
+      router.push(response.url || "/profile");
     }
   };
 
@@ -80,7 +91,7 @@ export default function Page() {
           Submit
         </button>
         <button
-          onClick={() => signIn("github")}
+          onClick={handleGithubSignIn}
           type="button"
           className="bg-gray-800 text-white font-bold py-2 px-4 rounded-lg w-full hover:bg-gray-900 transition duration-300 flex items-center justify-center mt-5"
         >
