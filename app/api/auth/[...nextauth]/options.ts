@@ -47,8 +47,14 @@ export const options: NextAuthOptions = {
   callbacks: {
     async jwt({ token, user, profile, trigger, session }) {
       if (trigger === "update") {
-        token.name = session.name;
-        token.email = session.email;
+        // Only update email if it has changed
+        if (session.email && session.email !== token.email) {
+          token.email = session.email;
+        }
+        // Only update name if it has changed
+        if (session.name && session.name !== token.name) {
+          token.name = session.name;
+        }
       }
       if (profile) {
         return { ...token, ...profile };
