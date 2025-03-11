@@ -14,6 +14,7 @@ export default function UpdateUser() {
   return (
     <div>
       <h1>update user</h1>
+
       <Image
         src={data?.user?.picture as string}
         alt=""

@@ -8,7 +8,7 @@ export default async function Home() {
   console.log("sesia", session);
 
   return (
-    <div className="flex bg-red-100 text-black">
+    <div className="flex">
       <div>
         <p>name: {session?.user?.name}</p>
         <p>email: {session?.user?.email}</p>
